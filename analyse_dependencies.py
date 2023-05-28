@@ -38,11 +38,15 @@ for service in services:
 for service in servicesDependencies:
     print(service)
 
+totalNumber = 0
+
 for service in servicesDependencies:
     for dependency in servicesDependencies[service]:
         print(service, dependency)
+        totalNumber += 1
 
-print("\n\n")
+print(f"\nTotal dependency number: {totalNumber}\n")
+
 
 # Print out table in human readable format
 print("Services depending on:")
